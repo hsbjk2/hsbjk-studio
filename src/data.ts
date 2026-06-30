@@ -83,7 +83,7 @@ export const projectsData: Project[] = [
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "TypeScript"],
     link: "https://hsbjk2.github.io/main-page-of-HSBJK-video-studio/",
     github: "https://github.com/hsbjk2/main-page-of-HSBJK-video-studio",
-    image: "video_studio.png",
+    image: "/images/video_studio.png",
     category: "web",
     isFeatured: true
   },
