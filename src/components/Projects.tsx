@@ -176,7 +176,12 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
               >
                 {/* Visual Mock Showcase Header */}
                 <div className="relative aspect-[16/10] overflow-hidden border-b border-white/5">
-                  {renderProjectHeader(proj.id)}
+
+    <img
+        src={proj.image}
+        alt={proj.title}
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
                   
                   {/* Overlay for hovering info */}
                   <div className="absolute inset-0 bg-slate-950/65 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-3 z-20">
