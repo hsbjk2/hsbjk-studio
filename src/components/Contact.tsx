@@ -39,11 +39,13 @@ export default function Contact({ isDarkMode }: ContactProps) {
     }
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {console.log("BUTTON CLICKED");
     e.preventDefault();
     if (!validate()) return;
 
     const handleSubmit = async (e: FormEvent) => {
+  console.log("BUTTON CLICKED");
+
   e.preventDefault();
 
   if (!validate()) return;
@@ -83,7 +85,6 @@ export default function Contact({ isDarkMode }: ContactProps) {
 
   setIsSubmitting(false);
 };
-  };
 
   const getContactIcon = (platform: string) => {
     switch (platform.toLowerCase()) {
