@@ -234,7 +234,7 @@ export default function Hero({ isDarkMode }: HeroProps) {
               isDarkMode ? 'border-white/10 glass-panel-dark shadow-2xl' : 'border-slate-200 glass-panel-light shadow-xl'
             }`}>
               <img
-                src="input_file_2.png"
+                src="profile.jpg"
                 alt={personalInfo.name}
                 className="w-full h-full object-cover object-center scale-[1.01] hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
