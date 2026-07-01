@@ -193,9 +193,11 @@ export default function Gallery({ isDarkMode }: GalleryProps) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-              className="w-[95vw] max-w-6xl max-h-[95vh]" rounded-[2.5rem] border overflow-hidden relative shadow-2xl ${
-                isDarkMode ? 'border-white/5 bg-slate-950' : 'border-slate-200 bg-white'
-              }`}
+              className={`w-[95vw] max-w-6xl max-h-[95vh] rounded-[2.5rem] border overflow-hidden relative shadow-2xl ${
+  isDarkMode
+    ? 'border-white/5 bg-slate-950'
+    : 'border-slate-200 bg-white'
+}`}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -208,18 +210,18 @@ export default function Gallery({ isDarkMode }: GalleryProps) {
 
               <div className="grid grid-cols-1 md:grid-cols-12 items-start h-auto">
                 {/* Left side: Image viewport */}
-                <div className="md:col-span-8 bg-black/60 relative flex items-center justify-center overflow-auto min-h-[300px] max-h-[85vh]"h-[300px]">
+                <div className="md:col-span-8 bg-black/60 flex items-center justify-center overflow-auto min-h-[300px] max-h-[90vh]">
                   
                     <img
                     src={selectedItem.url}
                     alt={selectedItem.title}
-                    className="w-auto h-auto max-w-full max-h-[85vh] object-contain mx-auto"
+                    className="w-auto h-auto max-w-full max-h-[90vh] object-contain mx-auto"
                     referrerPolicy="no-referrer"
                     />
                 </div>
 
                 {/* Right side: Meta details */}
-                <div className={`md:col-span-4 p-8 flex flex-col justify-between text-left ${
+                <div className={`hidden md:flex md:col-span-4 p-8 flex-col justify-between text-left ${
                   isDarkMode ? 'bg-slate-950' : 'bg-slate-50/50'
                 }`}>
                   <div className="space-y-6">
