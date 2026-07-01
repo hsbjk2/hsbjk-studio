@@ -190,7 +190,7 @@ export const galleryData: GalleryItem[] = [
     id:"1",
     title:"My Workspace",
     description:"HSBJK Workspace",
-    url:"/images/gallery/gallery_1.jpg",
+    url:"/images/gallery/gallery_1.png",
     category:"workspace",
     createdAt:"2026"
 },
@@ -198,7 +198,7 @@ export const galleryData: GalleryItem[] = [
     id:"2",
     title:"My Profile",
     description:"Founder of HSBJK",
-    url:"/images/gallery/gallery_2.jpg",
+    url:"/images/gallery/gallery_2.png",
     category:"profile",
     createdAt:"2026"
 },
