@@ -26,7 +26,7 @@ export const personalInfo = {
   instagram: "https://www.instagram.com/himanshubajekan/",
   logoIcon: "/images/HSBJK_Logo.png", // Monogram logo on white
   logoText: "input_file_1.png", // Monogram logo with HSBJK text
-  profilePic: "/images/PHOTO 2.jpg", // Portrait photo
+  profilePic: "/images/profile.jpg", // Portrait photo
   splitPic: "/images/gallery/gallery_2.png", // Split workspace photo
   resumeUrl: "#" // Will generate a beautiful dynamic digital resume printable modal or download link!
 };
@@ -104,7 +104,7 @@ export const projectsData: Project[] = [
     title: "HSBJK Wallify",
     description: "Premium desktop & mobile wallpaper hub with resolution filters, visual grids, download utilities, and beautiful material dark mode interface. Built with search categorization for creative users.",
     tags: ["React", "Tailwind CSS", "Vercel", "Media Storage"],
-    link: "#",
+    link: "https://hsbjk-wallify.vercel.app/",
     github: "https://github.com/hsbjk2/wallify",
     image: "/images/Wallify.png",
     category: "tool",
@@ -115,7 +115,7 @@ export const projectsData: Project[] = [
     title: "CalcLogic",
     description: "Advanced mathematical calculator application inspired by iOS style guidelines with fluid layouts, arithmetic history logs, memory keys, dark themes, and error correction systems.",
     tags: ["HTML5", "CSS3", "JavaScript", "Responsive UI"],
-    link: "#",
+    link: "https://hsbjk2.github.io/CalcLogic-Official-Page-/",
     github: "https://github.com/hsbjk2/calclogic",
     image: "/images/Calclogic.png",
     category: "tool",
@@ -126,7 +126,7 @@ export const projectsData: Project[] = [
     title: "HSBJK Image PDF Studio",
     description: "Professional multi-utility toolkit for on-the-fly image manipulation, format conversions, and PDF assembly. Supports secure client-side batch processing to ensure document privacy.",
     tags: ["React", "PDF-Lib", "Client-Side Processing", "Tailwind"],
-    link: "#",
+    link: "https://hsbjk2.github.io/HSBJK-Image-PDF-Studio/",
     github: "https://github.com/hsbjk2/image-pdf-studio",
     image: "/images/imagepdf_studio.png",
     category: "tool",
