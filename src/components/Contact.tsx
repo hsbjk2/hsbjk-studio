@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Github, Linkedin, Instagram, MapPin, Send, CheckCircle2, Sparkles, Loader2 } from 'lucide-react';
@@ -42,15 +43,46 @@ export default function Contact({ isDarkMode }: ContactProps) {
     e.preventDefault();
     if (!validate()) return;
 
-    setIsSubmitting(true);
+    const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault();
 
-    // Simulate clean premium server payload dispatch
+  if (!validate()) return;
+
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      'service_rbcmch9',
+      'template_rwkv1un',
+      {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      'i2mol9Q-Xzxt3rQc0'
+    );
+
+    setSubmitSuccess(true);
+
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+
     setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSubmitSuccess(false), 5000);
-    }, 1800);
+      setSubmitSuccess(false);
+    }, 5000);
+
+  } catch (error) {
+    console.error(error);
+    alert('Failed to send message.');
+  }
+
+  setIsSubmitting(false);
+};
   };
 
   const getContactIcon = (platform: string) => {
