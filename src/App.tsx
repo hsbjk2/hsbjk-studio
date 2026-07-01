@@ -14,7 +14,7 @@ import Education from './components/Education';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
+
 
 export default function App() {
   const [isLoading,] = useState(true);
@@ -56,9 +56,7 @@ export default function App() {
 
   return (
     <>
-      {/* Interactive Custom Trailing Cursor */}
-      <CustomCursor />
-
+     
    
       <AnimatePresence>
         { (

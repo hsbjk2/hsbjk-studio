@@ -193,7 +193,7 @@ export default function Gallery({ isDarkMode }: GalleryProps) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-              className={`max-w-4xl w-full rounded-[2.5rem] border overflow-hidden relative shadow-2xl ${
+              className="w-[95vw] max-w-6xl max-h-[95vh]" rounded-[2.5rem] border overflow-hidden relative shadow-2xl ${
                 isDarkMode ? 'border-white/5 bg-slate-950' : 'border-slate-200 bg-white'
               }`}
               onClick={(e) => e.stopPropagation()}
@@ -206,15 +206,16 @@ export default function Gallery({ isDarkMode }: GalleryProps) {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="grid grid-cols-1 md:grid-cols-12 items-stretch h-full">
+              <div className="grid grid-cols-1 md:grid-cols-12 items-start h-auto">
                 {/* Left side: Image viewport */}
-                <div className="md:col-span-8 bg-black/60 relative aspect-video md:aspect-auto flex items-center justify-center overflow-hidden min-h-[300px]">
-                  <img
+                <div className="md:col-span-8 bg-black/60 relative flex items-center justify-center overflow-auto min-h-[300px] max-h-[85vh]"h-[300px]">
+                  
+                    <img
                     src={selectedItem.url}
                     alt={selectedItem.title}
-                    className="w-full h-full object-contain max-h-[80vh]"
+                    className="w-auto h-auto max-w-full max-h-[85vh] object-contain mx-auto"
                     referrerPolicy="no-referrer"
-                  />
+                    />
                 </div>
 
                 {/* Right side: Meta details */}
